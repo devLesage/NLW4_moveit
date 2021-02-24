@@ -53,9 +53,39 @@
     font-size:1.25rem;
     font-weight: 600;
 
-    transition: 0.2s;
+    transition: 0.2s;   
+}
+.countdownButton footer{
+    display:grid;
+    grid-template-columns: 5fr 1fr;
+    gap:1rem;
+    
+}
+.countdownButton img{
+    flex:1;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.countdownButton:not(:disabled):hover{
+    background: var(--blue-dark);
 }
 
-.countdownButton:hover{
-    background: var(--blue-dark);
+.countdownButtonActive{
+    background: var(--white);
+    color: var(--title);
+}
+
+.countdownButtonActive:not(:disabled):hover{
+    background: var(--red);
+    color: var(--white);
+   
+}
+
+.countdownButton:disabled{
+    background:var(--white);
+    color:var(--text);
+    cursor:not-allowed;
+    border-bottom: 5px solid var(--green);
 }
